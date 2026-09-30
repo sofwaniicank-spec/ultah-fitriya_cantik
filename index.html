@@ -1,0 +1,306 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Fitriya ❤️</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            min-height: 100vh;
+            overflow-x: hidden;
+            color: white;
+        }
+
+        /* HATI BERJATUHAN */
+        .heart {
+            position: fixed;
+            top: -10px;
+            font-size: 25px;
+            animation: fall linear infinite;
+            z-index: 0;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-10vh) rotate(0deg);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* HALAMAN UTAMA */
+        .container {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 650px;
+            padding: 45px 30px;
+            background: rgba(255, 255, 255, 0.18);
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 30px;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+
+        .emoji {
+            font-size: 70px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        h1 {
+            font-size: 42px;
+            margin: 15px 0;
+        }
+
+        .name {
+            color: #fff;
+            text-shadow: 0 0 15px rgba(255,255,255,0.8);
+        }
+
+        .subtitle {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .message {
+            line-height: 1.8;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        button {
+            border: none;
+            padding: 15px 28px;
+            border-radius: 50px;
+            background: white;
+            color: #ff5f7e;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        button:hover {
+            transform: scale(1.08);
+            background: #fff0f3;
+        }
+
+        /* UCAPAN KEJUTAN */
+        #surprise {
+            display: none;
+            margin-top: 30px;
+            padding: 25px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+            animation: muncul 1s ease;
+        }
+
+        @keyframes muncul {
+            from {
+                opacity: 0;
+                transform: scale(0.7);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        #surprise h2 {
+            margin-bottom: 15px;
+        }
+
+        #surprise p {
+            line-height: 1.8;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            .emoji {
+                font-size: 55px;
+            }
+
+            .card {
+                padding: 35px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HATI -->
+    <div class="heart" style="left:10%; animation-duration:6s;">❤️</div>
+    <div class="heart" style="left:25%; animation-duration:8s;">💗</div>
+    <div class="heart" style="left:40%; animation-duration:5s;">💕</div>
+    <div class="heart" style="left:55%; animation-duration:7s;">❤️</div>
+    <div class="heart" style="left:70%; animation-duration:9s;">💖</div>
+    <div class="heart" style="left:85%; animation-duration:6s;">💗</div>
+
+    <div class="container">
+
+        <div class="card">
+
+            <div class="emoji">🎂</div>
+
+            <h1>
+                Happy Birthday
+                <span class="name">Fitriya</span> ❤️
+            </h1>
+
+            <p class="subtitle">
+                Hari ini adalah hari spesial untuk seseorang yang spesial.
+            </p>
+
+            <div class="message">
+
+                Selamat ulang tahun, Fitriya ❤️
+
+                <br><br>
+
+                Semoga di umur kamu yang sekarang,
+                semua hal baik datang menghampiri kamu.
+                Semoga kamu selalu diberikan kesehatan,
+                kebahagiaan, dan dimudahkan dalam setiap langkahmu.
+
+                <br><br>
+
+                Aku mungkin nggak selalu bisa memberikan
+                sesuatu yang sempurna, tapi aku akan selalu
+                berusaha memberikan yang terbaik untuk kamu.
+
+                <br><br>
+
+                Tetap jadi Fitriya yang aku kenal,
+                yang lucu, cantik, dan selalu punya cara
+                sendiri untuk bikin hari-hariku jadi lebih berwarna. ❤️
+
+            </div>
+
+            <button onclick="showSurprise()">
+                💌 Buka Pesan Untukmu
+            </button>
+
+            <div id="surprise">
+
+                <h2>💖 Untuk Kamu</h2>
+
+                <p>
+                    Kalau boleh berharap, aku cuma ingin
+                    kamu selalu bahagia.
+
+                    <br><br>
+
+                    Semoga tahun ini menjadi awal dari
+                    banyak hal indah dalam hidup kamu.
+
+                    <br><br>
+
+                    Dan semoga aku masih bisa menjadi
+                    salah satu alasan kecil di balik
+                    senyum kamu.
+
+                    <br><br>
+
+                    <b>Happy Birthday, Fitriya ❤️</b>
+
+                    <br><br>
+
+                    Jangan lupa bahagia hari ini,
+                    karena bulan ini adalah bulan lahirnya
+                    seseorang yang sangat berarti. 🥰
+                </p>
+
+            </div>
+
+            <div class="footer">
+                Made with ❤️ khusus untuk Fitriya
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function showSurprise() {
+
+            const surprise = document.getElementById("surprise");
+
+            surprise.style.display = "block";
+
+            // Membuat efek hati tambahan
+            for (let i = 0; i < 25; i++) {
+
+                const heart = document.createElement("div");
+
+                heart.innerHTML = "❤️";
+
+                heart.style.position = "fixed";
+                heart.style.left = Math.random() * 100 + "vw";
+                heart.style.bottom = "-20px";
+                heart.style.fontSize =
+                    Math.random() * 20 + 20 + "px";
+
+                heart.style.animation =
+                    "fall 4s linear forwards";
+
+                document.body.appendChild(heart);
+
+                setTimeout(() => {
+                    heart.remove();
+                }, 4000);
+            }
+        }
+
+    </script>
+
+</body>
+</html>
+```
